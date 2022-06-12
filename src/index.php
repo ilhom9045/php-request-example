@@ -112,6 +112,6 @@ $data = '{
 }';
 
 const BASE_URL = "http://127.0.0.1:8000/api/v1/subjects";
-$request = RequestBuilder::newBuilder()->baseUrl(BASE_URL)->post()->addParamWithName("add", "")->setBody($data)->build();
+$request = RequestBuilder::newBuilder()->baseUrl(BASE_URL)->post()->addHeaderWithValue("store_key", "QXBpIGtleSDRgdC10YDQstC10YDQsCA=")->addParamWithName("ad", "true")->setBody($data)->build();
 $response = $request->sendRequest();
 var_dump($response);
